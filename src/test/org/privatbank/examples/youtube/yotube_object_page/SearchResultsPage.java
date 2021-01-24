@@ -10,6 +10,7 @@ public class SearchResultsPage {
     public ElementsCollection getResults() {
         return $$("#contents ytd-video-renderer");
     }
+
     public SelenideElement getResult(int index) {
         return $("#contents ytd-video-renderer", index);
     }
