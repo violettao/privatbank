@@ -1,7 +1,9 @@
 package org.privatbank.examples.youtube.yotube_object_page;
 
 
+import com.codeborne.selenide.Configuration;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
@@ -9,6 +11,10 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.open;
 
 public class YoutubeTest {
+    @Before
+    public void setBrowser(){
+        Configuration.startMaximized=true;
+    }
     @Test
     public void tabNameContainsYoutube (){
         open("https://youtube.com");
